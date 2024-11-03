@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graduación Promo</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #e3f2fd;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #4a148c;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            animation: jump 0.5s infinite alternate;
+        }
+
+        @keyframes jump {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-10px); }
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .caption {
+            opacity: 1;
+        }
+
+        .toga-animation {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .toga {
+            position: absolute;
+            width: 100px;
+            height: auto;
+            animation: drop 2s infinite;
+            bottom: 0;
+        }
+
+        @keyframes drop {
+            0% { transform: translateY(-100px); opacity: 1; }
+            50% { opacity: 1; }
+            100% { transform: translateY(0); opacity: 0; }
+        }
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 1.2em;
+            color: #4a148c;
+        }
+
+        .button {
+            margin-top: 20px;
+            padding: 5px 10px; /* Hacer el botón más pequeño */
+            font-size: 0.9em; /* Tamaño de fuente más pequeño */
+            background-color: #5d90f0;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #2c16f5;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>¡Felicidades Graduados!</h1>
+
+    <div class="gallery">
+        <!-- Imágenes originales -->
+        <div class="gallery-item">
+            <img src="NAYE.jpg" alt="Nayeli Murillo">
+            <div class="caption">Nayeli Murillo</div>
+        </div>
+        <div class="gallery-item">
+            <img src="ZULE.jpg" alt="Zuleyka Castro">
+            <div class="caption">Zuleyka Castro</div>
+        </div>
+        <div class="gallery-item">
+            <img src="ash.jpg" alt="Ashley Herrera">
+            <div class="caption">Ashley Herrera</div>
+        </div>
+        <div class="gallery-item">
+            <img src="abi.jpg" alt="Abigail Cardona">
+            <div class="caption">Abigail Cardona</div>
+        </div>
+        <div class="gallery-item">
+            <img src="angie.jpg" alt="Angie Nahomy">
+            <div class="caption">Angie Nahomy</div>
+        </div>
+        <div class="gallery-item">
+            <img src="dani.jpg" alt="Daniela Rivera">
+            <div class="caption">Daniela Rivera</div>
+        </div>
+        <div class="gallery-item">
+            <img src="elsa.jpg" alt="Elsa Fabelly">
+            <div class="caption">Elsa Fabelly</div>
+        </div>
+        <div class="gallery-item">
+            <img src="heydi.jpg" alt="Heydi Molina">
+            <div class="caption">Heydi Molina</div>
+        </div>
+        <div class="gallery-item">
+            <img src="kritza.jpg" alt="Jeraldyn Segovia">
+            <div class="caption">Jeraldyn Segovia</div>
+        </div>
+        <div class="gallery-item">
+            <img src="loha.jpg" alt="Lohany Manzanarez">
+            <div class="caption">Lohany Manzanarez</div>
+        </div>
+        <div class="gallery-item">
+            <img src="meylin.jpg" alt="Meylin Nayeli">
+            <div class="caption">Meylin Nayeli</div>
+        </div>
+        <div class="gallery-item">
+            <img src="rachelle.jpg" alt="Rachelle Murillo">
+            <div class="caption">Rachelle Murillo</div>
+        </div>
+        <div class="gallery-item">
+            <img src="sandrita.jpg" alt="Carolina">
+            <div class="caption">Carolina Chavez</div>
+        </div>
+        <div class="gallery-item">
+            <img src="yurit.jpg" alt="Yurit Elizabeth">
+            <div class="caption">Yurit Elizabeth</div>
+        </div>
+        <div class="gallery-item">
+            <img src="ALEX.jpg" alt="Alex">
+            <div class="caption">Alex</div>
+        </div>
+        <div class="gallery-item">
+            <img src="Erwin Ordoñez.jpg" alt="Erwin Ordoñez">
+            <div class="caption">Erwin Ordoñez</div>
+        </div>
+        <div class="gallery-item">
+            <img src="arnoldo.jpg" alt="Arnoldo">
+            <div class="caption">Arnoldo</div>
+        </div>
+        <div class="gallery-item">
+            <img src="erick.jpg" alt="Erick Morales">
+            <div class="caption">Erick Morales</div>
+        </div>
+        <div class="gallery-item">
+            <img src="kenny.jpg" alt="Kenny Gomez">
+            <div class="caption">Kenny Gomez</div>
+        </div>
+        <div class="gallery-item">
+            <img src="yair.jpg" alt="Yair Osorto">
+            <div class="caption">Yair Osorto</div>
+        </div>
+        <div class="gallery-item">
+            <img src="Daniel Ordoñez.jpg" alt="Daniel Ordoñez">
+            <div class="caption">Daniel Ordoñez</div>
+        </div>
+        <div class="gallery-item">
+            <img src="Abigail Perez.jpg" alt="Abigail Perez">
+            <div class="caption">Abigail Perez</div>
+        </div>
+        <div class="gallery-item">
+            <img src="Kevin Peña.jpg" alt="Kevin Peña">
+            <div class="caption">Kevin Peña</div>
+        </div>
+        <div class="gallery-item">
+            <img src="MarioUrbina.jpg" alt="Mario Urbina">
+            <div class="caption">Mario Urbina</div>
+        </div>
+        <div class="gallery-item">
+            <img src="Nissi Vasquez.jpg" alt="Nissi Vasquez">
+            <div class="caption">Nissi Vasquez</div>
+        </div>
+        <div class="gallery-item">
+            <img src="Ismael Narvaez.jpg" alt="Ismael Narvaez">
+            <div class="caption">Ismael Narvaez</div>
+        </div>
+        <div class="gallery-item">
+            <img src="Jonathan Reyes.jpg" alt="Ismael Narvaez">
+            <div class="caption">Jonathan Reyes</div>
+        </div>
+    </div>
+
+    <div class="toga-animation">
+        <img src="gradus.png" alt="Toga" class="toga">
+    </div>
+
+    <footer>
+        <p>Gracias, profe, por ser buena onda.</p>
+    </footer>
+
+    <button class="button" onclick="goToMenu()">Regresar al Menú Principal</button>
+
+    <script>
+        function goToMenu() {
+            window.location.replace("Index.html");
+        }
+    </script>
+
+</body>
+</html>
+
+

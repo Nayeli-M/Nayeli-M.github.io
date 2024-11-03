@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instituto Franklin Delano Roosevelt</title>
+    <link rel="stylesheet" href="practica22.css">
+    
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #fcfeff; /* Fondo azul claro */
+        }
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        header img {
+            height: 60px;
+            margin-right: 15px;
+        }
+        .welcome-message {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.2em;
+            color: #35424a;
+        }
+        .section-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px;
+        }
+        section {
+            padding: 20px;
+            margin: 10px;
+            background: #ffffff;
+            border-radius: 5px;
+            border: 2px solid #35424a; /* Bordes para las secciones */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+            opacity: 0; /* Inicialmente oculto */
+            transform: translateY(20px); /* Desplazado hacia abajo */
+            transition: transform 0.5s ease, opacity 0.5s ease;
+        }
+        section.visible {
+            opacity: 1; /* Hacer visible */
+            transform: translateY(0); /* Regresar a la posición original */
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #35424a;
+            color: #ffffff;
+        }
+        .slider {
+            position: relative;
+            max-width: 600px;
+            margin: 20px auto;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+        .slider img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .nav-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .nav-button {
+            background: rgba(0, 0, 0, 0.5);
+            color: #ffffff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .social-button {
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #364d5f; /* Color de Facebook */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        /* Animaciones adicionales */
+        .section:hover {
+            transform: scale(1.05); /* Efecto de escalado */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra al pasar el ratón */
+        }
+        .button-link {
+            margin-top: 10px;
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #35424a;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="LOGO DEL FDR.png" alt="Logo del Instituto">
+        <h1>Instituto Franklin Delano Roosevelt</h1>
+    </header>
+
+    <main>
+        <div class="welcome-message">
+            <p>¡Bienvenidos a nuestra página! Aquí encontrarás toda la información sobre nuestro instituto.</p>
+        </div>
+        
+        <div class="section-container">
+            <section id="oferta-academica" class="section">
+                <h2>Oferta Académica</h2>
+                <div class="slider">
+                    <div class="slides">
+                        <div class="slide"><img src="LOGO DEL FDR.png" alt="Nuestro Logo"></div>
+                        <div class="slide"><img src="FDR2.jpg" alt="Nuestro Horario"></div>
+                        <div class="slide"><img src="imagen3.jpg" alt="Descripción de la Imagen 3"></div>
+                    </div>
+                    <div class="nav-buttons">
+                        <button class="nav-button" onclick="prevSlide()">&#10094;</button>
+                        <button class="nav-button" onclick="nextSlide()">&#10095;</button>
+                    </div>
+                </div>
+                <p>El Instituto Franklin Delano Roosevelt se dedica a ofrecer educación de alta calidad. Nuestra misión es formar profesionales competentes y éticos.</p>
+                <div class="button-container">
+                    <a href="OfertaAcademica.html" class="button-link">Oferta Académica</a>
+                </div>
+            </section>
+        
+            <section id="instalaciones" class="section">
+                <h2>Instalaciones</h2>
+                <ul>
+                    <li>Contamos con 2 edificios y dos áreas más.</li>
+                    <li>Campo de Fútbol</li>
+                    <li>Gimnasio</li>
+                    <li>Y mucho más.</li>
+                </ul>
+                <p>Ofrecemos un servicio con los mejores docentes, en uno de los mejores colegios de Puerto Cortés.</p>
+                <div class="button-container">
+                    <a href="Instalacioness.html" class="button-link">Instalaciones</a>
+                </div>
+            </section>
+        
+            <section id="quienes-somos" class="section">
+                <h2>Quiénes Somos</h2>
+                <p>Nuestras instalaciones están diseñadas para ofrecer un ambiente propicio para el aprendizaje. Para más información, dale click.</p>
+                <div class="button-container">
+                    <a href="Quienes_Somoss.html" class="button-link">Quiénes Somos</a>
+                </div>
+            </section>
+        
+            <section id="formularios" class="section">
+                <h2>Formularios</h2>
+                <p>Para obtener información sobre el proceso de admisión, visita nuestra sección de 
+                <a href="FormularioSS.html" class="button-link">Formularios</a></p>
+                <div class="button-container">
+                </div>
+            </section>
+        
+            <section id="promo" class="section">
+                <h2>Promo</h2>
+                <p>Promo 2024 Informática: <a href="mailto:info@institutofdr.edu"></a></p>
+                <div class="button-container">
+                    <a href="Promo_2024.html" class="button-link">Promo</a>
+                </div>
+            </section>
+        </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 2024 Instituto Franklin Delano Roosevelt. Todos los derechos reservados.</p>
+            <a href="https://www.facebook.com/inst.fdr?mibextid=JRoKGi" class="social-button" target="_blank">Visita nuestro Facebook</a>
+        </footer>
+        
+
+    <script>
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelector('.slides');
+            const totalSlides = document.querySelectorAll('.slide').length;
+            if (index >= totalSlides) currentSlide = 0;
+            if (index < 0) currentSlide = totalSlides - 1;
+            slides.style.transform = 'translateX(' + (-currentSlide * 100) + '%)';
+        }
+
+        function nextSlide() {
+            currentSlide++;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide--;
+            showSlide(currentSlide);
+        }
+
+        // Animación de carga
+        window.onload = function() {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach((section, index) => {
+                setTimeout(() => {
+                    section.classList.add('visible');
+                }, index * 300); // Cada sección aparecerá con un retraso
+            });
+        };
+
+        
+    </script>
+</body>
+<link rel="stylesheet" href="practica22.css">
+</html>

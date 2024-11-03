@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fcd3f5; /* Azul claro */
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #0c0b0b;
+}
+
+.carrera {
+    background: #fff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 2px solid #1b3bf0; /* Borde azul */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s; /* Efecto de hover */
+}
+
+.carrera:hover {
+    transform: scale(1.02); /* Efecto de escalado al pasar el ratón */
+}
+
+h2 {
+    color: #00b318;
+}
+
+.carrera img {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 30%; /* Ajusta el tamaño de las imágenes a un % */
+    display: block; /* Para centrar la imagen */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #00b309; /* Color del botón */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #609400; /* Color del botón al pasar el ratón */
+}
+
+.video-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.video-container video {
+    width: 50%; /* Ajusta al ancho del contenedor */
+    max-width: 600px; /* Ancho máximo */
+    border-radius: 5px;
+}
+body {
+    cursor: url('C:\Users\Dell\Pictures\cursor.png') 16 0, auto; /* Aquí, 16 y 0 son las coordenadas del punto "activo" del cursor */
+}
+
+body {
+    cursor: url('C:\Users\Dell\Pictures\cursor.png'), auto; /* Cambia 'ruta/a/tu/imagen-cursor.png' por la ruta de tu imagen */
+}
+

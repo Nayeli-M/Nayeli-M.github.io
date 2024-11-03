@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instalaciones del Colegio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ADD8E6; /* Azul claro */
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #0056b3;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .card {
+            background: #fff;
+            margin: 10px;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 300px; /* Ajusta el ancho según sea necesario */
+        }
+        img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .video-container {
+            margin: 20px 0;
+        }
+        .carousel {
+            position: relative;
+            width: 100%;
+            max-width: 300px;
+            margin: auto;
+        }
+        .carousel img {
+            display: none;
+            width: 100%;
+            border-radius: 5px;
+        }
+        .carousel img.active {
+            display: block;
+        }
+        .carousel button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .carousel button.prev {
+            left: 10px;
+        }
+        .carousel button.next {
+            right: 10px;
+        }
+        .moving-image {
+            position: absolute;
+            width: 100px;
+            animation: move 5s linear infinite; /* Animación de movimiento */
+        }
+        @keyframes move {
+            0% { left: -100px; }
+            100% { left: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Instalaciones del Colegio</h1>
+    <p>Bienvenidos a nuestro colegio. Aquí pueden conocer algunas de nuestras instalaciones.</p>
+
+    <div class="container">
+        <div class="card">
+            <h2>Aulas</h2>
+            <div class="carousel">
+                <img src="aula2.jpg" alt="Aula 1" class="active">
+                <img src="aula1.jpg" alt="Aula 2">
+                <img src="4.jpg" alt="Aula 3">
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+            <p>Las aulas están equipadas con tecnología moderna para facilitar el aprendizaje.</p>
+        </div>
+       
+        <div class="card">
+            <img src="biblio.jpg" alt="Biblioteca">
+            <h2>Biblioteca</h2>
+            <p>La biblioteca ofrece un amplio espacio para el estudio y una gran colección de libros.</p>
+        </div>
+        <div class="card">
+            <img src="tienda.jpg" alt="Cafetería">
+            <h2>Cafetería</h2>
+            <p>Nuestra cafetería ofrece una variedad de opciones saludables para los estudiantes.</p>
+        </div>
+        <div class="card">
+            <img src="campo.jpg" alt="Campo Deportivo">
+            <h2>Campo Deportivo</h2>
+            <p>Un amplio campo para practicar deportes al aire libre.</p>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <h2>Visita Virtual</h2>
+        </video>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/yhtu3TaFmVM?si=wa8FYElQ_DzQSeGI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </video>
+    </div>
+
+    <button onclick="goToMenu()">Regresar al Menú Principal</button>
+    
+    <script>
+        let currentSlide = 0;
+
+        function changeSlide(direction) {
+            const slides = document.querySelectorAll('.carousel img');
+            slides[currentSlide].classList.remove('active');
+
+            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        function goToMenu() {
+            window.location.replace("file:///C:/Users/Dell/Documents/Proyecto_Dise%C3%B1o/Index.html");
+        }
+    </script>
+<link rel="stylesheet" href="styles.css">
+
+</body>
+</html>
+
+    
+
+
+
+
+
